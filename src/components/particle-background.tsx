@@ -34,7 +34,7 @@ export default function ParticleBackground() {
       <div
         className="animated-bg fixed top-0 left-0 w-full h-full z-0"
         style={{
-          background: "radial-gradient(ellipse at center, #07233a 0%, #031726 35%, #00060c 100%)",
+          background: "radial-gradient(ellipse at center, #07233a 0%, #031726 15%, #00060c 100%)",
           backgroundSize: "400% 400%",
           animation: "backgroundShift 20s ease infinite",
         }}

@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section
       id="join"
-      className="py-32 px-12 text-center bg-gradient-to-b from-transparent via-blue-950/30 to-transparent"
+      className="relative z-10 py-32 px-12 text-center bg-gradient-to-b from-transparent via-blue-950/30 to-transparent"
     >
       <h2
         className="text-5xl mb-8 text-yellow-400 md:text-3xl"

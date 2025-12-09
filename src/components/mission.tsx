@@ -1,6 +1,6 @@
 export default function Mission() {
   return (
-    <section id="mission" className="py-32 px-12 bg-gradient-to-b from-transparent via-blue-950/30 to-transparent">
+    <section id="mission" className="relative z-10 py-32 px-12 bg-gradient-to-b from-transparent via-blue-950/30 to-transparent">
       <h2
         className="text-5xl text-center mb-10 text-yellow-400 md:text-3xl"
         style={{ textShadow: "0 0 20px rgba(255, 215, 0, 0.4)" }}

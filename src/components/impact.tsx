@@ -28,23 +28,27 @@ const impactCards = [
 export default function Impact() {
   return (
     <section id="impact" className="py-32 px-12">
-      <h2
-        className="text-5xl text-center mb-16 text-yellow-400 md:text-3xl"
-        style={{ textShadow: "0 0 20px rgba(255, 215, 0, 0.4)" }}
-      >
-        Our Impact Areas
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+     <h2 className="text-5xl text-center mb-16 text-white md:text-3xl">
+  Our Impact Areas
+</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto">
         {impactCards.map((card, index) => (
           <div
             key={index}
-            className="fade-in-up bg-blue-950/60 p-10 rounded-3xl border-2 border-yellow-500/30 transition-all hover:translate-y-2 hover:border-yellow-500/80 hover:shadow-lg backdrop-blur-lg"
-            style={{ boxShadow: "hover: 0 0 30px rgba(255, 215, 0, 0.3)" }}
+            className="fade-in-up bg-blue-950/60 p-8 rounded-3xl border border-yellow-500/30 transition-all hover:translate-y-2 hover:border-yellow-500/80 hover:shadow-lg backdrop-blur-lg"
           >
-            <div className="text-5xl mb-5">{card.icon}</div>
-            <h3 className="text-2xl mb-4 text-yellow-400">{card.title}</h3>
-            <p className="text-gray-200 leading-relaxed">{card.description}</p>
+            <div className="text-2xl mb-4">{card.icon}</div>
+
+            <h3 className="text-xl font-semibold text-yellow-400 mb-3">
+              {card.title}
+            </h3>
+
+            <p className="text-gray-200 leading-relaxed text-sm">
+              {card.description}
+            </p>
           </div>
+
         ))}
       </div>
     </section>

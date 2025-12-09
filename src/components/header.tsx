@@ -1,26 +1,26 @@
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full px-8 py-3 flex justify-between items-center bg-black/90 backdrop-blur-lg z-50 border-b border-yellow-500/20">
+    <header className="fixed top-0 w-full px-6 py-4 flex justify-between items-center bg-black/90 backdrop-blur-lg z-50 border-b border-yellow-500/20">
       <div
-        className="text-2xl font-bold text-yellow-400 drop-shadow-lg"
-        style={{ textShadow: "0 0 20px rgba(255, 215, 0, 0.6)" }}
+        className="text-lg font-bold text-yellow-400 drop-shadow-lg"
+        style={{ textShadow: "0 0 12px rgba(255, 215, 0, 0.5)", lineHeight: 1 }}
       >
         TechNova Global 🌍
       </div>
-      <nav className="flex gap-6">
-        <a href="#about" className="text-white font-small transition-all relative group">
+      <nav className="flex gap-4">
+        <a href="#about" className="text-xs text-white font-medium leading-tight transition-all relative group">
           About
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#impact" className="text-white font-small transition-all relative group">
+        <a href="#impact" className="text-xs text-white font-medium leading-tight transition-all relative group">
           Impact
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#mission" className="text-white font-small transition-all relative group">
+        <a href="#mission" className="text-xs text-white font-medium leading-tight transition-all relative group">
           Mission
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#join" className="text-white font-small transition-all relative group">
+        <a href="#join" className="text-xs text-white font-medium leading-tight transition-all relative group">
           Join Us
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
         </a>
