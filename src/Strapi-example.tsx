@@ -12,7 +12,7 @@ export interface Article {
   publishedAt: Date;
 }
 
-const STRAPI_URL = "https://tech-nova-a2u7.onrender.com";
+const STRAPI_URL = "https://fruitful-appliance-ba347b6e40.strapiapp.com";
 
 function Example() {
   const [articles, setArticles] = useState<Article[]>([]);
