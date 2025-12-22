@@ -5,7 +5,10 @@ export default [
   {
     name: "strapi::cors",
     config: {
-      origin: ["http://localhost:5173", "tech-nova-mu.vercel.app"],
+      // Allow local dev and the deployed frontend domain(s)
+      origin: 
+      "*"
+      ,
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       credentials: true,

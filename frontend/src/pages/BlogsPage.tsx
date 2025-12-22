@@ -44,7 +44,7 @@ export default function BlogsPage() {
       <div className="p-8 pt-24">
         <div className="max-w-4xl mx-auto">
           <div className="animate-pulse space-y-6">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="flex gap-6 items-start p-6 blog-card">
                 <div className="w-44 h-28 bg-gray-200 rounded" />
                 <div className="flex-1">
@@ -107,7 +107,7 @@ export default function BlogsPage() {
             <h2 className="text-xl font-semibold mb-4">Explore articles</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {cards.map((article: any) => (
-                <a key={article.id} href={`#/blogs/${article.id}`} className="block blog-card overflow-hidden">
+                <a key={article.id} href={`#/blogs/${article.documentId ?? article.id}`} className="block blog-card overflow-hidden">
                   <div className="relative h-44 sm:h-48">
                     {getImageSrc(article.coverImage) ? (
                       <img loading="lazy" src={getImageSrc(article.coverImage) ?? undefined} alt={article.title} className="w-full h-full object-cover" />
@@ -134,23 +134,37 @@ export default function BlogsPage() {
             </div>
 
             <div className="horizontal-scroll">
-              <div className="flex gap-6">
-                {latest.map((article: any) => (
-                  <a key={article.id} href={`#/blogs/${article.id}`} className="latest-card min-w-[300px] sm:min-w-[360px] flex-shrink-0 snap-center blog-card overflow-hidden">
-                    <div className="relative h-44">
-                      {getImageSrc(article.coverImage) ? (
-                        <img loading="lazy" src={getImageSrc(article.coverImage) ?? undefined} alt={article.title} className="w-full h-full object-cover" />
-                      ) : (
-                        <div className="w-full h-full bg-gray-100" />
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold mb-1">{article.title}</h3>
-                      <div className="text-sm blog-meta">{article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : ''} • {estimateReadTime(article.content)}</div>
-                      <p className="mt-3 text-sm text-gray-700">{getTextFromContent(article.content)}</p>
-                    </div>
-                  </a>
-                ))}
+              <div className="w-full">
+                <div className="flex gap-6">
+                  {latest.map((article: any) => (
+                    <a
+                      key={article.id}
+                      href={`#/blogs/${article.documentId ?? article.id}`}
+                      className="latest-card w-[720px] sm:w-[820px] flex-shrink-0 snap-center blog-card overflow-hidden"
+                    >
+                      <div className="relative h-44">
+                        {getImageSrc(article.coverImage) ? (
+                          <img
+                            loading="lazy"
+                            src={getImageSrc(article.coverImage) ?? undefined}
+                            alt={article.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-100" />
+                        )}
+                      </div>
+
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold mb-1">{article.title}</h3>
+                        <div className="text-sm blog-meta">
+                          {article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : ''} • {estimateReadTime(article.content)}
+                        </div>
+                        <p className="mt-3 text-sm text-gray-700">{getTextFromContent(article.content)}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

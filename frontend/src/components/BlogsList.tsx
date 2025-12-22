@@ -28,7 +28,23 @@ export default function BlogsList() {
     return url.startsWith("http") ? url : STRAPI_URL + url
   }
 
-  if (loading) return <div className="p-8 text-center">Loading blogs…</div>
+  if (loading)
+    return (
+      <div className="p-8">
+        <div className="max-w-4xl mx-auto animate-pulse space-y-6">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-md shadow-sm border border-gray-200">
+              <div className="w-28 h-20 bg-gray-200 rounded" />
+              <div className="flex-1 space-y-3 py-1">
+                <div className="h-6 bg-gray-200 rounded w-3/4" />
+                <div className="h-4 bg-gray-200 rounded w-1/2" />
+                <div className="h-3 bg-gray-200 rounded w-full" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   if (error) return <div className="p-8 text-center text-red-400">Error: {error}</div>
   if (!blogs || blogs.length === 0) return <div className="p-8 text-center">No posts found.</div>
 
@@ -78,7 +94,7 @@ export default function BlogsList() {
                   </div>
                   <p className="text-gray-700 leading-relaxed">{getTextFromContent(article.content)}</p>
                   <div className="mt-3">
-                    <a href={`#/blogs/${article.id}`} className="text-yellow-600 hover:underline font-medium">Read more →</a>
+                    <a href={`#/blogs/${article.documentId ?? article.id}`} className="text-yellow-600 hover:underline font-medium">Read more →</a>
                   </div>
                 </div>
               </div>
