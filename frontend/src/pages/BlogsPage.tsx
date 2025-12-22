@@ -42,18 +42,53 @@ export default function BlogsPage() {
   if (loading)
     return (
       <div className="p-8 pt-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="animate-pulse space-y-6">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="flex gap-6 items-start p-6 blog-card">
-                <div className="w-44 h-28 bg-gray-200 rounded" />
-                <div className="flex-1">
-                  <div className="h-6 bg-gray-200 rounded w-3/4 mb-3" />
-                  <div className="h-4 bg-gray-200 rounded w-1/2 mb-2" />
-                  <div className="h-3 bg-gray-200 rounded w-full" />
+        <div className="max-w-6xl mx-auto px-4 space-y-12 animate-pulse">
+          {/* Hero skeleton */}
+          <div className="rounded-2xl overflow-hidden">
+            <div className="w-full h-64 sm:h-96 bg-gray-200 rounded" />
+            <div className="mt-4">
+              <div className="h-8 bg-gray-200 rounded w-1/3 mb-3" />
+              <div className="h-4 bg-gray-200 rounded w-1/2" />
+            </div>
+          </div>
+
+          {/* Explore articles grid skeleton (6 cards) */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Explore articles</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="block blog-card overflow-hidden">
+                  <div className="relative h-44 sm:h-48 bg-gray-200" />
+                  <div className="p-4">
+                    <div className="h-5 bg-gray-200 rounded w-3/4 mb-2" />
+                    <div className="h-3 bg-gray-200 rounded w-1/2" />
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Latest horizontal scroller skeleton */}
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold">Latest</h2>
+              <div className="text-sm text-muted-foreground">&nbsp;</div>
+            </div>
+
+            <div className="horizontal-scroll">
+              <div className="flex gap-6">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="latest-card w-[720px] sm:w-[820px] flex-shrink-0 snap-center blog-card overflow-hidden">
+                    <div className="relative h-44 bg-gray-200" />
+                    <div className="p-4">
+                      <div className="h-5 bg-gray-200 rounded w-1/2 mb-2" />
+                      <div className="h-3 bg-gray-200 rounded w-1/4 mb-3" />
+                      <div className="h-3 bg-gray-200 rounded w-full" />
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
