@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import useBlogStore from "../stores/blogStore"
-import Footer from "../components/footer"
+import BlogFooter from "../components/BlogFooter"
 
 function estimateReadTime(content: any) {
   if (!content) return "1 min read"
@@ -67,7 +67,7 @@ export default function BlogPage({ id }: { id: string }) {
           }) : <p>{String(b.content)}</p>}
         </div>
       </article>
-      <Footer />
+      <BlogFooter />
     </>
   )
 }

@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import Footer from "../components/footer"
+import BlogFooter from "../components/BlogFooter"
 import useBlogStore from "../stores/blogStore"
 
 function estimateReadTime(content: any) {
@@ -156,7 +156,7 @@ export default function BlogsPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      <BlogFooter />
     </>
   )
 }
