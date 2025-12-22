@@ -95,7 +95,7 @@ export default function BlogsPage() {
                   <div className="mb-2">
                     <span className="inline-block bg-white/10 text-white text-sm px-3 py-1 rounded-full">Blog</span>
                   </div>
-                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight">{hero.title}</h1>
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-white/90 font-bold leading-tight">{hero.title}</h1>
                   <p className="mt-3 max-w-2xl text-sm sm:text-base text-white/90">{getTextFromContent(hero.content)}</p>
                 </div>
               </div>
