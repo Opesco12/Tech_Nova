@@ -41,7 +41,7 @@ export default function BlogsPage() {
 
   if (loading)
     return (
-      <div className="p-8">
+      <div className="p-8 pt-24">
         <div className="max-w-4xl mx-auto">
           <div className="animate-pulse space-y-6">
             {[1, 2, 3].map((i) => (

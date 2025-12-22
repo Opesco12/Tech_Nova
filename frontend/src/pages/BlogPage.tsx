@@ -42,8 +42,8 @@ export default function BlogPage({ id }: { id: string }) {
     return () => { mounted = false }
   }, [id, fetchById])
 
-  if (loading) return <div className="p-8">Loading post…</div>
-  if (!post) return <div className="p-8">Post not found.</div>
+  if (loading) return <div className="p-8 pt-24">Loading post…</div>
+  if (!post) return <div className="p-8 pt-24">Post not found.</div>
 
   const b = post
   const getImageUrl = () => {
