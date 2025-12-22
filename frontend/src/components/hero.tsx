@@ -24,8 +24,9 @@ export default function Hero() {
         A movement of young African innovators using technology and AI to solve real-world problems and transform
         communities across the continent.
       </p>
-      <button
-        className="text-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full font-bold cursor-pointer transition-all hover:scale-105 hover:shadow-2xl hero-button"
+      <a
+        href="#/blogs"
+        className="text-lg inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full font-bold cursor-pointer transition-all hover:scale-105 hover:shadow-2xl hero-button"
         style={{
           padding: "14px 34px",
           fontSize: "16px",
@@ -34,7 +35,7 @@ export default function Hero() {
         }}
       >
         Get Started 💡
-      </button>
+      </a>
     </section>
   )
 }
